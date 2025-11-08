@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Git Ready, Set, Code! Git and Github Setup Step-by-Step Guide</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#60a5fa;--mono:#dbeafe}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;line-height:1.5;background:linear-gradient(180deg,#061028 0%,#07121b 100%);color:#e6eef8;padding:32px}
+    .wrap{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+    h1{margin:0;font-size:2.2rem}
+    p.lead{color:var(--muted);margin:4px 0 18px}
+
+    .card{background:rgba(255,255,255,0.03);border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    h2{margin-top:0}
+    pre{background:#021129;padding:12px;border-radius:8px;overflow:auto;color:var(--mono);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.95rem}
+    code{font-family:inherit}
+    .cmd-row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+    button.copy{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .note{background:rgba(96,165,250,0.06);padding:10px;border-radius:8px;color:var(--accent);font-size:0.95rem}
+    footer{color:var(--muted);font-size:0.9rem;margin-top:18px}
+    a{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Git Ready, Set, Code! Git and Github Setup Step-by-Step Guide</h1>
+        <p class="lead">Fast start for Windows users: install, configure, connect to GitHub, and run essential commands (init, clone, add, commit, push, pull, branch).</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Download Git on Windows</h2>
+      <ul>
+        <li>To download Git, you should have a later version of Windows on your computer device.</li>
+        <li>Make sure you have a Github account.</li>
+    </section>
+
+    <section class="card">
+      <h2>1) Install Git for Windows</h2>
+      <p>To start, go to the official Git website and download the installer suitable for your Windows system.</p>
+      <p class="note">You can download it here: <a href="https://git-scm.com/download/win" target="_blank" rel="noreferrer">https://git-scm.com/download/win</a></p>
+    </section>
+
+<section class="card">
+      <h2>2) Click 64-bit Git under Standalone Installer</h2>
+      <p>On the download page, scroll down and click on the <strong>64-bit Git for Windows Setup</strong> link to download the 64-bit installer.</p>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220513224110/1.PNG" width="600" height="300"><br>
+      <p class="note">This will download the latest version of Git for Windows. Always choose the 64-bit setup for modern systems.</p>
+    </section>
+
+<section class="card">
+      <h2>3) Install the Downloaded File</h2>
+      <p>After the download completes, locate the setup file in your browser’s <strong>Downloads</strong> section or through the <strong>File Explorer</strong>. Run the installer and follow the default recommended settings to finish installation.</p>
+    </section>
+
+    <section class="card">
+      <h2>4) Verify if Git is Installed</h2>
+      <p>Once installation is complete, create a folder anywhere on your computer. Then, right-click inside the folder to check if Git is properly installed.</p>
+      <p><em>Note:</em> For Windows 10, you’ll immediately see the installed Git options upon right-click. For Windows 11, click <strong>"Show more options"</strong>.</p>
+      <img src="https://faheemezani.github.io/assets/images/open-git-bash-here.PNG" width="445" height="510"><br>
+      <p class="note">If you can see both “Open Git Bash here” and “Open Git GUI here” options, Git is successfully installed!</p>
+    </section>
+
+    <section class="card">
+      <h2>5) Complete the Installation</h2>
+      <p>When Git Setup installation appears, keep clicking <strong>Next</strong> until the installation begins. After that, click Install and wait for the process to finish. When the installation is completed, click <strong>Finish</strong>. You can now proceed to set up your GitHub account and start managing your repositories.</p>
+    </section>
+
+    <section class="card">
+      <h2>Setup Git Using VS Code</h2>
+      <p>For this step-by-step procedure, we’ll use <strong>Visual Studio Code (VS Code)</strong> to initialize and configure Git.</p>
+
+      <ol>
+        <li>Open the project folder you created earlier.</li>
+        <li>Click the folder’s address bar at the top, type <i>cmd</i>, then press <strong>Enter</strong>. This opens the Command Prompt window.</li>
+          <img src="https://technoresult.com/wp-content/uploads/2022/03/type-cmd-in-address-bar.jpg" width="680" height="300"><br>
+        <li>In Command Prompt, type <code>code .</code> (don’t forget the space before the period) to launch VS Code in that folder.</li>
+        <li>Inside VS Code, go to <strong>View → Terminal</strong> to open the built-in terminal window.</li>
+        <li>Click the dropdown arrow (<code>v</code>) beside “powershell” in the terminal and select <strong>Git Bash</strong> from the list.</li>
+      </ol>
+
+      <p class="note">When Git Bash is selected, your terminal text becomes colorful — confirming it’s active.</p>
+
+      <h3>Configure Git in VS Code</h3>
+      <p>Run these commands one by one in the terminal to set up your Git user information:</p>
+
+      <pre>
+$ git config --global user.name "Your Name"
+$ git config --global user.email "youremail@example.com"
+$ git config --global push.default matching
+$ git config --global alias.co checkout
+$ git init
+      </pre>
+
+      <<p class="note">⚠️ Important: Make sure to replace "Your Name" and "youremail@example.com" with your actual GitHub name and email. <br>Do <strong>NOT</strong> include invalid characters or use a double dollar sign (<code>$$</code>). This may cause an error in your setup.<br><p class="note">Git Command Reference: <a href="https://codemy.com/git/" target="_blank" rel="noreferrer">https://codemy.com/git/</a></p>
+      
+
+      <p>After entering the commands, your Git configuration details should appear in the terminal, confirming that your setup is complete.</p>
+
+      <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="100" alt="Git Logo">
+      <img src="https://code.visualstudio.com/assets/images/code-stable.png" width="100" alt="VS Code Logo">
+
+      <p class="note">🎉 You’re now ready to use Git in VS Code! You can start creating repositories, committing changes, and pushing to GitHub with ease.</p>
+    </section>
+
+<section class="card">
+<h2>Setting Up Your GitHub Account</h2>
+<ol>
+<li>Go to a Github website <a href="https://github.com" target="_blank">GitHub.com</a> and create a new GitHub account or log in using your active Google account.</li>
+<li>After logging in, click the green <strong>New</strong> button on the left side of the dashboard to create a new repository.</li>
+<li>Enter a repository name and click <strong>Create Repository</strong> located at the bottom right of the page.</li>
+</ol>
+<p class="note">💡 Tip: Keep repository names short, simple, uppercase and lowercase. Avoid using spaces; use hyphens (-) or underscores (_) instead.</p>
+</section>
+
+
+<section class="card">
+<h2>Creating and Linking a README File</h2>
+<p>Open your VS Code and navigate to your project folder. Right-click in the file explorer and select <strong>New File</strong>. Name it <code>README.md</code>. This file serves as your project’s introduction or documentation.</p>
+<img src="https://simpledev.io/wp-content/uploads/2021/06/vscode-menu-1-1024x816.png" width="700" height="600"><br>
+<p>Save the file, then open Git Bash or the integrated VS Code terminal. Next, copy the setup commands from your GitHub repository — these appear under “...or push an existing repository from the command line.”</p>
+<pre>
+echo "# repository-name" > README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/username/repository.git
+git push -u origin main
+</pre>
+<p class="note">⚠️ Remember to replace <code>username</code> and <code>repository</code> with your actual GitHub username and repo name.</p>
+</section>
+
+
+<section class="card">
+<h2>Finalizing the Setup</h2>
+<p>Once all commands have been entered successfully, go back to your GitHub page and refresh it. You should now see your <code>README.md</code> file and your initial commit displayed in the repository.</p>
+<p class="note">🎉 Congratulations! You’ve successfully linked your local project to GitHub and completed your setup.</p>
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="100" alt="GitHub Logo">
+</section>
+
+	
+  </div>
+</body>
+</html>
